@@ -1,104 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KOVALYUK | Ссылки.</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968866.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOVALYUK | Игровой Стрим</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968705.png">
+  
+  <!-- Иконки Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Шрифт как на картинке -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      background: #2f2f2f;
-      font-family: 'Orbitron', sans-serif;
+      padding: 0;
+      background-color: #2e2e2e;
       color: white;
+      font-family: 'Anton', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      height: 100vh;
       text-align: center;
     }
+
     h1 {
-      font-size: 3rem;
       color: #00ffff;
-      text-shadow: 0 0 15px #00ffff;
-      margin-bottom: 0.5rem;
+      font-size: 48px;
+      text-shadow: 0 0 10px #00ffff;
+      margin-bottom: 10px;
     }
+
     p {
+      font-size: 16px;
       color: #ccc;
-      margin-bottom: 2rem;
+      margin-bottom: 20px;
     }
-    .socials {
+
+    .icons {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin-bottom: 2rem;
+      gap: 20px;
+      margin-bottom: 30px;
     }
-    .socials a {
-      display: inline-block;
-      transition: transform 0.2s ease;
+
+    .icons a {
+      color: white;
+      font-size: 28px;
+      transition: transform 0.2s, color 0.3s;
     }
-    .socials a:hover {
-      transform: scale(1.1);
-    }
-    .socials img {
-      width: 40px;
-      height: 40px;
-      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
-    }
-    footer {
-      font-size: 0.9rem;
-      color: #aaa;
-      margin-top: 2rem;
-    }
-    footer span {
+
+    .icons a:hover {
+      transform: scale(1.2);
       color: #00ffff;
-      font-style: italic;
+    }
+
+    footer {
+      font-size: 12px;
+      color: #888;
+    }
+
+    footer a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <h1>KOVALYUK</h1>
   <p>Игровой стримы. Эпик. Хайлайты.</p>
 
-  <div class="socials">
-    <!-- YouTube -->
-    <a href="https://youtube.com/@kovalyuk_" target="_blank" title="YouTube">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-    </a>
-
-    <!-- Twitch -->
-    <a href="https://twitch.tv/kovalyuk_" target="_blank" title="Twitch">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="Twitch">
-    </a>
-
-    <!-- Telegram -->
-    <a href="https://t.me/KovalyuKstream" target="_blank" title="Telegram">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
-    </a>
-
-    <!-- Discord -->
-    <a href="https://discord.com/users/kovalyuk" target="_blank" title="Discord">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">
-    </a>
-
-    <!-- VK -->
-    <a href="https://vk.com/k0valyukk" target="_blank" title="VK">
-      <img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" alt="VK">
-    </a>
-
-    <!-- Steam -->
-    <a href="https://steamcommunity.com/id/K0valyuk/" target="_blank" title="Steam">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Steam">
-    </a>
+  <div class="icons">
+    <a href="https://youtube.com/@kovalyuk_" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://twitch.tv/kovalyuk_" target="_blank"><i class="fab fa-twitch"></i></a>
+    <a href="https://t.me/KovalyuKstream" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://discord.com/users/kovalyuk" target="_blank"><i class="fab fa-discord"></i></a>
+    <a href="https://vk.com/k0valyukk" target="_blank"><i class="fab fa-vk"></i></a>
+    <a href="https://steamcommunity.com/id/K0valyuk/" target="_blank"><i class="fab fa-steam-symbol"></i></a>
   </div>
 
   <footer>
-    Подписывайся. Играй. Побеждай вместе с <span>KOVALYUK</span>.
+    Подписывайся. Играй. Побеждай вместе с <a href="https://github.com/KOVALYUK">KOVALYUK</a>
   </footer>
-
 </body>
 </html>
