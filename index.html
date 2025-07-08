@@ -1,60 +1,109 @@
 <!DOCTYPE html><html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KovalyuK | Геймер и Стример</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-      background: linear-gradient(to right, #6a00f4, #9f00ff);
-    }
-    h1 {
-      margin: 0;
-      font-size: 3rem;
-    }
-    .section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .social-links a {
-      color: #00ffee;
-      margin: 0.5rem;
-      display: inline-block;
-      text-decoration: none;
-    }
-    iframe {
-      max-width: 100%;
-      margin-top: 1rem;
-      border-radius: 10px;
-    }
-    .videos iframe {
-      margin-bottom: 1.5rem;
-    }
+    :root {
+      --bg-color: #0d0d0d;
+      --text-color: #f5f5f5;
+      --accent-color: #00ffee;
+    }body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+header {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(to right, #6a00f4, #9f00ff);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.section {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.social-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--accent-color);
+  color: #000;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: none;
+  margin-top: 1rem;
+}
+
+.mode-toggle {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.mode-toggle button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .mode-toggle {
+    margin-top: 2rem;
+  }
+}
+
   </style>
 </head>
 <body>
   <header>
     <h1>KovalyuK</h1>
     <p>Геймер и стример</p>
-  </header>  <div class="section">
+  </header>  <div class="mode-toggle">
+    <button onclick="toggleMode()">Переключиться на режим для компьютера</button>
+  </div>  <div class="section">
     <h2>🔴 Прямой эфир на Twitch</h2>
     <iframe
       src="https://player.twitch.tv/?channel=kovalyuk_&parent=yourdomain.github.io"
-      height="400"
-      width="100%"
       allowfullscreen>
     </iframe>
   </div>  <div class="section videos">
     <h2>📺 Последние видео с YouTube</h2>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed?listType=user_uploads&list=kovalyuk_" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=kovalyuk_" allowfullscreen></iframe>
   </div>  <div class="section">
     <h2>🌐 Мои соцсети</h2>
     <div class="social-links">
@@ -68,6 +117,12 @@
       <a href="https://steamcommunity.com/id/K0valyuk/" target="_blank">Steam</a>
       <a href="https://steamcommunity.com/tradeoffer/new/?partner=398108121" target="_blank">Steam Trade</a>
     </div>
-  </div>
-</body>
+  </div>  <script>
+    let desktop = false;
+    function toggleMode() {
+      desktop = !desktop;
+      document.body.style.maxWidth = desktop ? "1400px" : "100%";
+      document.body.style.margin = desktop ? "0 auto" : "0";
+    }
+  </script></body>
 </html>
