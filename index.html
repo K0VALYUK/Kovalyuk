@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KOVALYUK | Геймерский профиль</title>
 
-  <!-- Шрифт с геймерским стилем -->
+  <!-- Шрифты -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,27 +17,41 @@
     }
 
     body {
-      font-family: 'Bungee Shade', cursive;
+      font-family: 'Orbitron', sans-serif;
       color: white;
       background-image: url('https://img3.akspic.ru/previews/4/6/0/4/6/164064/164064-goroda_kiberpank-kiberpank_2077-kiberpank-nauchnaya_fantastika-cifrovoe_iskusstvo-x750.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 60px 0 30px;
+      padding: 60px 0 20px;
       font-size: 4em;
+      font-family: 'Bungee Shade', cursive;
       color: #ffffff;
       text-shadow: 0 0 10px #ff00cc, 0 0 30px #00fff7;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .about {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.2em;
+      font-family: 'Orbitron', sans-serif;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 1s forwards;
     }
 
     .player-container {
       display: flex;
       justify-content: center;
       margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 1.5s forwards;
     }
 
     iframe {
@@ -55,6 +70,8 @@
       gap: 15px;
       margin-bottom: 60px;
       font-family: Arial, sans-serif;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 2s forwards;
     }
 
     .socials a {
@@ -72,13 +89,64 @@
       background: #ff0055;
       box-shadow: 0 0 15px #ff0055;
     }
+
+    .corner-image {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 130px;
+      opacity: 0.8;
+      pointer-events: none;
+      animation: fadeIn 2s ease-out 2.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .extras {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+
+    .extras a {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 1em;
+      text-decoration: none;
+      transition: 0.3s;
+      font-family: Arial, sans-serif;
+      margin: 10px;
+    }
+
+    .extras a:hover {
+      background: #00ffff;
+      color: black;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        font-size: 2.5em;
+      }
+      iframe {
+        height: 300px;
+      }
+      .corner-image {
+        width: 90px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>KOVALYUK</header>
 
+  <p class="about">Стример, геймер, нарезки и угар — CS2, GTA V RP, Dota Turbo, PUBG, Hearthstone</p>
+
   <div class="player-container">
-    <!-- Вставлен твой плейлист с Shorts -->
     <iframe 
       src="https://www.youtube.com/embed/videoseries?list=PL55ZngY4c5WJ9yFK9mKJgB0GqXz42mDc-&autoplay=1&loop=1&mute=1&rel=0"
       allow="autoplay; encrypted-media"
@@ -100,5 +168,14 @@
     <a href="https://steamcommunity.com/id/k0valyuk" target="_blank">Steam</a>
     <a href="https://discord.com/users/KOVALYUK" target="_blank">Discord</a>
   </div>
+
+  <div class="extras">
+    <a href="#">📥 Скачать медиа-кит</a>
+    <a href="#">🖥️ Мой конфиг и сборка</a>
+  </div>
+
+  <img src="https://i.imgur.com/Fzhk1ba.png" alt="hero" class="corner-image" />
+
 </body>
 </html>
+
