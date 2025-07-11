@@ -33,54 +33,92 @@
       0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #0ff, 0 0 30px #0ff; }
       50% { text-shadow: 0 0 10px #fff, 0 0 20px #a0f, 0 0 30px #0ff, 0 0 40px #0ff; }
     }
-    .about { text-align: center; margin-bottom: 40px; font-size: 1.2em; font-family: 'Orbitron', sans-serif; opacity: 0; animation: fadeIn 2s ease-out 1s forwards; }
-    .counters {
-      display: flex; justify-content: center; gap: 40px;
-      margin-bottom: 40px; font-family: 'Orbitron', sans-serif;
-      opacity: 0; animation: fadeIn 2s ease-out 2.5s forwards;
+    .about {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.2em;
+      font-family: 'Orbitron', sans-serif;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 1s forwards;
     }
-    .counter-box {
-      background: rgba(0,0,0,0.6);
-      padding: 12px 20px; border-radius: 12px;
-      display: flex; align-items: center; gap: 10px;
-      box-shadow: 0 0 10px #000;
-    }
-    .counter-box img { width: 30px; height: 30px; }
     .player-container {
-      display: flex; justify-content: center; margin-bottom: 40px;
-      opacity: 0; animation: fadeIn 2s ease-out 1.5s forwards;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 1.5s forwards;
     }
     iframe {
-      border: none; width: 90%; max-width: 720px; height: 405px;
-      border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      border: none;
+      width: 90%;
+      max-width: 720px;
+      height: 405px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
     .socials {
-      display: flex; justify-content: center; flex-wrap: wrap;
-      gap: 15px; margin-bottom: 60px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 60px;
       font-family: Arial, sans-serif;
-      opacity: 0; animation: fadeIn 2s ease-out 2s forwards;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 2s forwards;
     }
     .socials a {
-      background: rgba(0, 0, 0, 0.75); padding: 10px 16px;
-      border-radius: 10px; text-decoration: none; color: white;
-      font-size: 1.05em; transition: 0.3s; box-shadow: 0 0 5px #000;
-      display: flex; align-items: center; gap: 8px;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.05em;
+      transition: 0.3s;
+      box-shadow: 0 0 5px #000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .socials a:hover { background: #ff0055; box-shadow: 0 0 15px #ff0055; }
-    .socials a img { width: 20px; height: 20px; }
-    .extras { text-align: center; margin-top: 30px; margin-bottom: 60px; }
+    .socials a:hover {
+      background: #ff0055;
+      box-shadow: 0 0 15px #ff0055;
+    }
+    .socials a img {
+      width: 20px;
+      height: 20px;
+    }
+    .extras {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
     .extras button {
-      background: rgba(255, 255, 255, 0.1); color: #fff;
-      padding: 10px 20px; border-radius: 12px; font-size: 1em;
-      border: none; cursor: pointer; transition: 0.3s;
-      font-family: Arial, sans-serif; margin: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: Arial, sans-serif;
+      margin: 10px;
     }
-    .extras button:hover { background: #00ffff; color: black; }
+    .extras button:hover {
+      background: #00ffff;
+      color: black;
+    }
     .pc-info {
-      display: none; text-align: center; font-family: 'Orbitron', sans-serif;
-      font-size: 1em; padding: 20px;
-      background: rgba(0,0,0,0.6); border-radius: 12px;
-      margin: 0 auto 40px; max-width: 600px; line-height: 1.6;
+      display: none;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1em;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      margin: 0 auto 40px;
+      max-width: 600px;
+      line-height: 1.6;
     }
     @media screen and (max-width: 600px) {
       header { font-size: 1.5em; }
@@ -101,17 +139,6 @@
 <body>
   <header>KOVALYUK</header>
   <p class="about">Стример, геймер, нарезки и угар — CS2, GTA V RP, Dota Turbo, PUBG, Hearthstone</p>
-
-  <div class="counters">
-    <div class="counter-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT">
-      <iframe src="https://socialcounts.org/embed/youtube/UCaHofiHZt-qSj7yg-pu2pGg" frameborder="0" width="120" height="40"></iframe>
-    </div>
-    <div class="counter-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111614.png" alt="Twitch">
-      <iframe src="https://socialcounts.org/embed/twitch/kovalyuk_" frameborder="0" width="120" height="40"></iframe>
-    </div>
-  </div>
 
   <div class="player-container">
     <iframe src="https://www.youtube.com/embed/videoseries?list=PL55ZngY4c5WJ9yFK9mKJgB0GqXz42mDc-&autoplay=1&loop=1&mute=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
