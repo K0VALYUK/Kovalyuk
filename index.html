@@ -9,23 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Orbitron', sans-serif;
       color: white;
-      background-image: url('https://img3.akspic.ru/previews/4/6/0/4/6/164064/164064-goroda_kiberpank-kiberpank_2077-kiberpank-nauchnaya_fantastika-cifrovoe_iskusstvo-x750.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background: url('https://img3.akspic.ru/previews/4/6/0/4/6/164064/164064-goroda_kiberpank-kiberpank_2077-kiberpank-nauchnaya_fantastika-cifrovoe_iskusstvo-x750.jpg') center/cover fixed no-repeat;
       min-height: 100vh;
       overflow-x: hidden;
     }
-
     header {
       font-family: 'Press Start 2P', cursive;
       font-size: 2em;
@@ -34,168 +25,70 @@
       background: linear-gradient(90deg, #a0f, #0ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow:
-        0 0 5px #fff,
-        0 0 10px #a0f,
-        0 0 20px #0ff,
-        0 0 30px #0ff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #0ff, 0 0 30px #0ff;
       opacity: 0;
       animation: fadeIn 1.5s ease-out forwards, pulse 2s infinite 2s;
     }
-
     @keyframes pulse {
-      0%, 100% {
-        text-shadow: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #0ff, 0 0 30px #0ff;
-      }
-      50% {
-        text-shadow: 0 0 10px #fff, 0 0 20px #a0f, 0 0 30px #0ff, 0 0 40px #0ff;
-      }
+      0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #0ff, 0 0 30px #0ff; }
+      50% { text-shadow: 0 0 10px #fff, 0 0 20px #a0f, 0 0 30px #0ff, 0 0 40px #0ff; }
     }
-
-    .about {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 1.2em;
-      font-family: 'Orbitron', sans-serif;
-      opacity: 0;
-      animation: fadeIn 2s ease-out 1s forwards;
-    }
-
+    .about { text-align: center; margin-bottom: 40px; font-size: 1.2em; font-family: 'Orbitron', sans-serif; opacity: 0; animation: fadeIn 2s ease-out 1s forwards; }
     .counters {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 40px;
-      font-family: 'Orbitron', sans-serif;
-      opacity: 0;
-      animation: fadeIn 2s ease-out 2.5s forwards;
+      display: flex; justify-content: center; gap: 40px;
+      margin-bottom: 40px; font-family: 'Orbitron', sans-serif;
+      opacity: 0; animation: fadeIn 2s ease-out 2.5s forwards;
     }
-
     .counter-box {
       background: rgba(0,0,0,0.6);
-      padding: 12px 20px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      padding: 12px 20px; border-radius: 12px;
+      display: flex; align-items: center; gap: 10px;
       box-shadow: 0 0 10px #000;
     }
-
-    .counter-box img {
-      width: 30px;
-      height: 30px;
-    }
-
-    .counter-box .count {
-      font-size: 1.2em;
-      color: #0ff;
-    }
-
+    .counter-box img { width: 30px; height: 30px; }
     .player-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-      opacity: 0;
-      animation: fadeIn 2s ease-out 1.5s forwards;
+      display: flex; justify-content: center; margin-bottom: 40px;
+      opacity: 0; animation: fadeIn 2s ease-out 1.5s forwards;
     }
-
     iframe {
-      border: none;
-      width: 90%;
-      max-width: 720px;
-      height: 405px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      border: none; width: 90%; max-width: 720px; height: 405px;
+      border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
-
     .socials {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 60px;
+      display: flex; justify-content: center; flex-wrap: wrap;
+      gap: 15px; margin-bottom: 60px;
       font-family: Arial, sans-serif;
-      opacity: 0;
-      animation: fadeIn 2s ease-out 2s forwards;
+      opacity: 0; animation: fadeIn 2s ease-out 2s forwards;
     }
-
     .socials a {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 10px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      font-size: 1.05em;
-      transition: 0.3s;
-      box-shadow: 0 0 5px #000;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      background: rgba(0, 0, 0, 0.75); padding: 10px 16px;
+      border-radius: 10px; text-decoration: none; color: white;
+      font-size: 1.05em; transition: 0.3s; box-shadow: 0 0 5px #000;
+      display: flex; align-items: center; gap: 8px;
     }
-
-    .socials a:hover {
-      background: #ff0055;
-      box-shadow: 0 0 15px #ff0055;
+    .socials a:hover { background: #ff0055; box-shadow: 0 0 15px #ff0055; }
+    .socials a img { width: 20px; height: 20px; }
+    .extras { text-align: center; margin-top: 30px; margin-bottom: 60px; }
+    .extras button {
+      background: rgba(255, 255, 255, 0.1); color: #fff;
+      padding: 10px 20px; border-radius: 12px; font-size: 1em;
+      border: none; cursor: pointer; transition: 0.3s;
+      font-family: Arial, sans-serif; margin: 10px;
     }
-
-    .socials a:active {
-      transform: scale(0.96);
+    .extras button:hover { background: #00ffff; color: black; }
+    .pc-info {
+      display: none; text-align: center; font-family: 'Orbitron', sans-serif;
+      font-size: 1em; padding: 20px;
+      background: rgba(0,0,0,0.6); border-radius: 12px;
+      margin: 0 auto 40px; max-width: 600px; line-height: 1.6;
     }
-
-    .socials a img {
-      width: 20px;
-      height: 20px;
+    @media screen and (max-width: 600px) {
+      header { font-size: 1.5em; }
+      iframe { height: 300px; }
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    .extras {
-      text-align: center;
-      margin-top: 30px;
-      margin-bottom: 60px;
-    }
-
-    .extras button {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-size: 1em;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-      font-family: Arial, sans-serif;
-      margin: 10px;
-    }
-
-    .extras button:hover {
-      background: #00ffff;
-      color: black;
-    }
-
-    .pc-info {
-      display: none;
-      text-align: center;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1em;
-      padding: 20px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 12px;
-      margin: 0 auto 40px;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-
-    @media screen and (max-width: 600px) {
-      header {
-        font-size: 1.5em;
-      }
-      iframe {
-        height: 300px;
-      }
     }
   </style>
   <script>
@@ -206,25 +99,53 @@
   </script>
 </head>
 <body>
-  <header title="Никнейм KOVALYUK">KOVALYUK</header>
-
+  <header>KOVALYUK</header>
   <p class="about">Стример, геймер, нарезки и угар — CS2, GTA V RP, Dota Turbo, PUBG, Hearthstone</p>
 
   <div class="counters">
     <div class="counter-box">
       <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT">
-      <div class="count">
-        <iframe src="https://livecounts.io/embed/youtube/K0VALYUK" frameborder="0" width="120" height="40" scrolling="no"></iframe>
-      </div>
+      <iframe src="https://socialcounts.org/embed/youtube/UCaHofiHZt-qSj7yg-pu2pGg" frameborder="0" width="120" height="40"></iframe>
     </div>
     <div class="counter-box">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111614.png" alt="Twitch">
-      <div class="count">
-        <iframe src="https://livecounts.io/embed/twitch/kovalyuk_" frameborder="0" width="120" height="40" scrolling="no"></iframe>
-      </div>
+      <iframe src="https://socialcounts.org/embed/twitch/kovalyuk_" frameborder="0" width="120" height="40"></iframe>
     </div>
   </div>
 
-  <!-- Остальная часть твоего сайта (видео, соцсети, кнопка ПК, блок сборки и т.д.) -->
+  <div class="player-container">
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL55ZngY4c5WJ9yFK9mKJgB0GqXz42mDc-&autoplay=1&loop=1&mute=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="socials">
+    <a href="https://www.youtube.com/c/K0VALYUK" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="yt">YouTube</a>
+    <a href="https://www.twitch.tv/kovalyuk_" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="twitch">Twitch</a>
+    <a href="https://vk.com/k0valyuk" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK</a>
+    <a href="https://vk.com/k0valyukk" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK Группа</a>
+    <a href="https://t.me/KovalyuKstream" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="tg">Telegram</a>
+    <a href="https://kick.com/kovalyuk" target="_blank"><img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/08/12/kick-stream-featured.jpg?width=1200&quality=60&format=auto" alt="kick">Kick</a>
+    <a href="https://trovo.live/s/Kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxwGW91fxkXpgrd_wYdOWbZNMvycAs7hCnA&s" alt="trovo">Trovo</a>
+    <a href="https://www.instagram.com/k0valyuk/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="insta">Instagram</a>
+    <a href="https://www.faceit.com/ru/players/kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXdUSlb9ptvpbvF4fcGPPmDdHbS8qVs7L3PA&s" alt="faceit">Faceit</a>
+    <a href="https://www.donationalerts.com/r/kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlh9qcJPe6cxOqXtrXlzEIEcrxECaBvP1A1A&s" alt="donate">Donate</a>
+    <a href="https://steamcommunity.com/id/k0valyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NFzAgOzGpHjcJ_ti8xDDblWQDKjRLqaJWQ&s" alt="steam">Steam</a>
+    <a href="https://discord.com/users/KOVALYUK" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="discord">Discord</a>
+  </div>
+
+  <div class="extras">
+    <button onclick="togglePCInfo()">🖥️ Мой ПК</button>
+  </div>
+
+  <div id="pcInfo" class="pc-info">
+    <strong>Моя сборка:</strong><br>
+    🔹 Процессор: AMD Ryzen 7 3700X<br>
+    🔹 Видеокарта: NVIDIA GeForce RTX 3070<br>
+    🔹 ОЗУ: HyperX Fury Black 2×8 GB<br>
+    🔹 Материнка: Gigabyte B450M Gaming<br>
+    🔹 SSD M.2: Samsung 1 TB<br>
+    🔹 Монитор: AOC 27G2U/BK 144 Гц<br>
+    🔹 Клавиатура: Logitech G413<br>
+    🔹 Мышка: Logitech G102<br>
+  </div>
 </body>
 </html>
