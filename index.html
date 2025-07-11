@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KOVALYUK | Геймерский профиль</title>
+  <title>KOVALYUK | Профиль</title>
 
   <!-- Шрифты -->
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
@@ -111,21 +111,35 @@
       margin-bottom: 60px;
     }
 
-    .extras a {
+    .extras button {
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
       padding: 10px 20px;
       border-radius: 12px;
       font-size: 1em;
-      text-decoration: none;
+      border: none;
+      cursor: pointer;
       transition: 0.3s;
       font-family: Arial, sans-serif;
       margin: 10px;
     }
 
-    .extras a:hover {
+    .extras button:hover {
       background: #00ffff;
       color: black;
+    }
+
+    .pc-info {
+      display: none;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1em;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      margin: 0 auto 40px;
+      max-width: 600px;
+      line-height: 1.6;
     }
 
     @media screen and (max-width: 600px) {
@@ -140,6 +154,12 @@
       }
     }
   </style>
+  <script>
+    function togglePCInfo() {
+      const info = document.getElementById('pcInfo');
+      info.style.display = info.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
 </head>
 <body>
   <header>KOVALYUK</header>
@@ -170,12 +190,22 @@
   </div>
 
   <div class="extras">
-    <a href="#">📥 Скачать медиа-кит</a>
-    <a href="#">🖥️ Мой конфиг и сборка</a>
+    <button onclick="togglePCInfo()">🖥️ Мой ПК</button>
+  </div>
+
+  <div id="pcInfo" class="pc-info">
+    <strong>Моя сборка:</strong><br>
+    🔹 Процессор: AMD Ryzen 7 3700X<br>
+    🔹 Видеокарта: NVIDIA GeForce RTX 3070<br>
+    🔹 ОЗУ: HyperX Fury Black 2×8 GB<br>
+    🔹 Материнка: Gigabyte B450M Gaming<br>
+    🔹 SSD M.2: Samsung 1 TB<br>
+    🔹 Монитор: AOC 27G2U/BK 144 Гц<br>
+    🔹 Клавиатура: Logitech G413<br>
+    🔹 Мышка: Logitech G102<br>
   </div>
 
   <img src="https://i.imgur.com/Fzhk1ba.png" alt="hero" class="corner-image" />
-
 </body>
 </html>
 
