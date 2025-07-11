@@ -6,7 +6,7 @@
   <title>KOVALYUK | Профиль</title>
 
   <!-- Шрифты -->
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -27,8 +27,8 @@
     }
 
     header {
-      font-family: 'Saira Stencil One', cursive;
-      font-size: 4em;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2em;
       text-align: center;
       margin: 40px 0 10px;
       background: linear-gradient(90deg, #a0f, #0ff);
@@ -40,7 +40,16 @@
         0 0 20px #0ff,
         0 0 30px #0ff;
       opacity: 0;
-      animation: fadeIn 1.5s ease-out forwards;
+      animation: fadeIn 1.5s ease-out forwards, pulse 2s infinite 2s;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #0ff, 0 0 30px #0ff;
+      }
+      50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #a0f, 0 0 30px #0ff, 0 0 40px #0ff;
+      }
     }
 
     .about {
@@ -94,14 +103,18 @@
       gap: 8px;
     }
 
-    .socials a img {
-      width: 20px;
-      height: 20px;
-    }
-
     .socials a:hover {
       background: #ff0055;
       box-shadow: 0 0 15px #ff0055;
+    }
+
+    .socials a:active {
+      transform: scale(0.96);
+    }
+
+    .socials a img {
+      width: 20px;
+      height: 20px;
     }
 
     @keyframes fadeIn {
@@ -148,7 +161,7 @@
 
     @media screen and (max-width: 600px) {
       header {
-        font-size: 2.5em;
+        font-size: 1.5em;
       }
       iframe {
         height: 300px;
@@ -163,7 +176,7 @@
   </script>
 </head>
 <body>
-  <header>KOVALYUK</header>
+  <header title="Никнейм KOVALYUK">KOVALYUK</header>
 
   <p class="about">Стример, геймер, нарезки и угар — CS2, GTA V RP, Dota Turbo, PUBG, Hearthstone</p>
 
@@ -176,18 +189,18 @@
   </div>
 
   <div class="socials">
-    <a href="https://www.youtube.com/c/K0VALYUK" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="yt">YouTube</a>
-    <a href="https://www.twitch.tv/kovalyuk_" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="twitch">Twitch</a>
-    <a href="https://vk.com/k0valyuk" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK</a>
-    <a href="https://vk.com/k0valyukk" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK Группа</a>
-    <a href="https://t.me/KovalyuKstream" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="tg">Telegram</a>
-    <a href="https://kick.com/kovalyuk" target="_blank"><img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/08/12/kick-stream-featured.jpg?width=1200&quality=60&format=auto" alt="kick">Kick</a>
-    <a href="https://trovo.live/s/Kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxwGW91fxkXpgrd_wYdOWbZNMvycAs7hCnA&s" alt="trovo">Trovo</a>
-    <a href="https://www.instagram.com/k0valyuk/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="insta">Instagram</a>
-    <a href="https://www.faceit.com/ru/players/kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXdUSlb9ptvpbvF4fcGPPmDdHbS8qVs7L3PA&s" alt="faceit">Faceit</a>
-    <a href="https://www.donationalerts.com/r/kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlh9qcJPe6cxOqXtrXlzEIEcrxECaBvP1A1A&s" alt="donate">Donate</a>
-    <a href="https://steamcommunity.com/id/k0valyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NFzAgOzGpHjcJ_ti8xDDblWQDKjRLqaJWQ&s" alt="steam">Steam</a>
-    <a href="https://discord.com/users/KOVALYUK" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="discord">Discord</a>
+    <a href="https://www.youtube.com/c/K0VALYUK" target="_blank" title="Перейти на YouTube"><img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="yt">YouTube</a>
+    <a href="https://www.twitch.tv/kovalyuk_" target="_blank" title="Перейти на Twitch"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="twitch">Twitch</a>
+    <a href="https://vk.com/k0valyuk" target="_blank" title="Перейти в VK"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK</a>
+    <a href="https://vk.com/k0valyukk" target="_blank" title="Перейти в группу VK"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK Группа</a>
+    <a href="https://t.me/KovalyuKstream" target="_blank" title="Перейти в Telegram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="tg">Telegram</a>
+    <a href="https://kick.com/kovalyuk" target="_blank" title="Перейти на Kick"><img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/08/12/kick-stream-featured.jpg?width=1200&quality=60&format=auto" alt="kick">Kick</a>
+    <a href="https://trovo.live/s/Kovalyuk" target="_blank" title="Перейти на Trovo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxwGW91fxkXpgrd_wYdOWbZNMvycAs7hCnA&s" alt="trovo">Trovo</a>
+    <a href="https://www.instagram.com/k0valyuk/" target="_blank" title="Перейти в Instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="insta">Instagram</a>
+    <a href="https://www.faceit.com/ru/players/kovalyuk" target="_blank" title="Перейти на Faceit"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXdUSlb9ptvpbvF4fcGPPmDdHbS8qVs7L3PA&s" alt="faceit">Faceit</a>
+    <a href="https://www.donationalerts.com/r/kovalyuk" target="_blank" title="Поддержать на DonationAlerts"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlh9qcJPe6cxOqXtrXlzEIEcrxECaBvP1A1A&s" alt="donate">Donate</a>
+    <a href="https://steamcommunity.com/id/k0valyuk" target="_blank" title="Профиль в Steam"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NFzAgOzGpHjcJ_ti8xDDblWQDKjRLqaJWQ&s" alt="steam">Steam</a>
+    <a href="https://discord.com/users/KOVALYUK" target="_blank" title="Профиль в Discord"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="discord">Discord</a>
   </div>
 
   <div class="extras">
