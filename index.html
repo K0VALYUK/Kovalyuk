@@ -61,6 +61,36 @@
       animation: fadeIn 2s ease-out 1s forwards;
     }
 
+    .counters {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      font-family: 'Orbitron', sans-serif;
+      opacity: 0;
+      animation: fadeIn 2s ease-out 2.5s forwards;
+    }
+
+    .counter-box {
+      background: rgba(0,0,0,0.6);
+      padding: 12px 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .counter-box img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .counter-box .count {
+      font-size: 1.2em;
+      color: #0ff;
+    }
+
     .player-container {
       display: flex;
       justify-content: center;
@@ -180,43 +210,21 @@
 
   <p class="about">Стример, геймер, нарезки и угар — CS2, GTA V RP, Dota Turbo, PUBG, Hearthstone</p>
 
-  <div class="player-container">
-    <iframe 
-      src="https://www.youtube.com/embed/videoseries?list=PL55ZngY4c5WJ9yFK9mKJgB0GqXz42mDc-&autoplay=1&loop=1&mute=1&rel=0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    ></iframe>
+  <div class="counters">
+    <div class="counter-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YT">
+      <div class="count">
+        <iframe src="https://livecounts.io/embed/youtube/K0VALYUK" frameborder="0" width="120" height="40" scrolling="no"></iframe>
+      </div>
+    </div>
+    <div class="counter-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111614.png" alt="Twitch">
+      <div class="count">
+        <iframe src="https://livecounts.io/embed/twitch/kovalyuk_" frameborder="0" width="120" height="40" scrolling="no"></iframe>
+      </div>
+    </div>
   </div>
 
-  <div class="socials">
-    <a href="https://www.youtube.com/c/K0VALYUK" target="_blank" title="Перейти на YouTube"><img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="yt">YouTube</a>
-    <a href="https://www.twitch.tv/kovalyuk_" target="_blank" title="Перейти на Twitch"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="twitch">Twitch</a>
-    <a href="https://vk.com/k0valyuk" target="_blank" title="Перейти в VK"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK</a>
-    <a href="https://vk.com/k0valyukk" target="_blank" title="Перейти в группу VK"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK Группа</a>
-    <a href="https://t.me/KovalyuKstream" target="_blank" title="Перейти в Telegram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="tg">Telegram</a>
-    <a href="https://kick.com/kovalyuk" target="_blank" title="Перейти на Kick"><img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/08/12/kick-stream-featured.jpg?width=1200&quality=60&format=auto" alt="kick">Kick</a>
-    <a href="https://trovo.live/s/Kovalyuk" target="_blank" title="Перейти на Trovo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxwGW91fxkXpgrd_wYdOWbZNMvycAs7hCnA&s" alt="trovo">Trovo</a>
-    <a href="https://www.instagram.com/k0valyuk/" target="_blank" title="Перейти в Instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="insta">Instagram</a>
-    <a href="https://www.faceit.com/ru/players/kovalyuk" target="_blank" title="Перейти на Faceit"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXdUSlb9ptvpbvF4fcGPPmDdHbS8qVs7L3PA&s" alt="faceit">Faceit</a>
-    <a href="https://www.donationalerts.com/r/kovalyuk" target="_blank" title="Поддержать на DonationAlerts"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlh9qcJPe6cxOqXtrXlzEIEcrxECaBvP1A1A&s" alt="donate">Donate</a>
-    <a href="https://steamcommunity.com/id/k0valyuk" target="_blank" title="Профиль в Steam"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NFzAgOzGpHjcJ_ti8xDDblWQDKjRLqaJWQ&s" alt="steam">Steam</a>
-    <a href="https://discord.com/users/KOVALYUK" target="_blank" title="Профиль в Discord"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="discord">Discord</a>
-  </div>
-
-  <div class="extras">
-    <button onclick="togglePCInfo()">🖥️ Мой ПК</button>
-  </div>
-
-  <div id="pcInfo" class="pc-info">
-    <strong>Моя сборка:</strong><br>
-    🔹 Процессор: AMD Ryzen 7 3700X<br>
-    🔹 Видеокарта: NVIDIA GeForce RTX 3070<br>
-    🔹 ОЗУ: HyperX Fury Black 2×8 GB<br>
-    🔹 Материнка: Gigabyte B450M Gaming<br>
-    🔹 SSD M.2: Samsung 1 TB<br>
-    🔹 Монитор: AOC 27G2U/BK 144 Гц<br>
-    🔹 Клавиатура: Logitech G413<br>
-    🔹 Мышка: Logitech G102<br>
-  </div>
+  <!-- Остальная часть твоего сайта (видео, соцсети, кнопка ПК, блок сборки и т.д.) -->
 </body>
 </html>
