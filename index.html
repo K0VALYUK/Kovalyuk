@@ -2,177 +2,164 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KOVALYUK | Профиль</title>
-
-  <!-- Шрифты -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@500&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KOVALYUK — стример</title>
+  <meta name="description" content="KOVALYUK: стримы по CS2, GTA V RP, Dota 2, PUBG и Hearthstone. Twitch, YouTube, Telegram и остальные площадки." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Unbounded:ital,wght@1,500;1,700&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Orbitron', sans-serif;
-      color: white;
-      background: url('https://i.ibb.co/kgQdQYww/Chat-GPT-Image-11-2025-22-50-22.png') center/cover fixed no-repeat;
-      min-height: 100vh;
-      overflow-x: hidden;
+    :root {
+      --bg: #09090b;
+      --surface: #121214;
+      --fg: #f5f5f7;
+      --muted: #9b9ba6;
+      --accent: #ff2d78;
+      --line: #2a2a30;
     }
-    header {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 2em;
-      text-align: center;
-      margin: 40px 0 10px;
-      background: linear-gradient(90deg, #a0f, #0ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #0ff, 0 0 30px #0ff;
-      opacity: 0;
-      animation: fadeIn 1.5s ease-out forwards, pulse 2s infinite 2s;
-    }
-    @keyframes pulse {
-      0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #a0f, 0 0 20px #0ff, 0 0 30px #0ff; }
-      50% { text-shadow: 0 0 10px #fff, 0 0 20px #a0f, 0 0 30px #0ff, 0 0 40px #0ff; }
-    }
-    .about {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 1.2em;
-      font-family: 'Orbitron', sans-serif;
-      opacity: 0;
-      animation: fadeIn 2s ease-out 1s forwards;
-    }
-    .player-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-      opacity: 0;
-      animation: fadeIn 2s ease-out 1.5s forwards;
-    }
-    iframe {
-      border: none;
-      width: 90%;
-      max-width: 720px;
-      height: 405px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.7);
-    }
-    .socials {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 60px;
-      font-family: Arial, sans-serif;
-      opacity: 0;
-      animation: fadeIn 2s ease-out 2s forwards;
-    }
-    .socials a {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 10px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      font-size: 1.05em;
-      transition: 0.3s;
-      box-shadow: 0 0 5px #000;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .socials a:hover {
-      background: #ff0055;
-      box-shadow: 0 0 15px #ff0055;
-    }
-    .socials a img {
-      width: 20px;
-      height: 20px;
-    }
-    .extras {
-      text-align: center;
-      margin-top: 30px;
-      margin-bottom: 60px;
-    }
-    .extras button {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-size: 1em;
-      border: none;
-      cursor: pointer;
-      transition: 0.3s;
-      font-family: Arial, sans-serif;
-      margin: 10px;
-    }
-    .extras button:hover {
-      background: #00ffff;
-      color: black;
-    }
-    .pc-info {
-      display: none;
-      text-align: center;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1em;
-      padding: 20px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 12px;
-      margin: 0 auto 40px;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-    @media screen and (max-width: 600px) {
-      header { font-size: 1.5em; }
-      iframe { height: 300px; }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: Manrope, system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header { position: absolute; inset: 0 0 auto; z-index: 2; }
+    .bar { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 16px; }
+    .logo { font-family: Unbounded, sans-serif; font-style: italic; font-size: 1.15rem; }
+    nav { display: flex; gap: 22px; color: rgba(245,245,247,.8); font-size: .95rem; }
+    .btn { display: inline-flex; align-items: center; background: var(--accent); color: #fff; font-weight: 700; border-radius: 6px; padding: 10px 16px; border: 0; }
+    .btn.ghost { background: rgba(9,9,11,.4); border: 1px solid rgba(245,245,247,.25); }
+    .hero { position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero .shade { position: absolute; inset: 0; background: linear-gradient(to top, var(--bg), rgba(9,9,11,.75) 42%, rgba(9,9,11,.25)); }
+    .hero .wrap { position: relative; padding: 120px 0 64px; }
+    .kicker { color: var(--accent); letter-spacing: .22em; text-transform: uppercase; font-size: .78rem; font-weight: 700; }
+    h1, h2 { font-family: Unbounded, sans-serif; font-style: italic; font-weight: 700; letter-spacing: -0.03em; margin: 0; }
+    h1 { font-size: clamp(3.2rem, 9vw, 7rem); line-height: .92; margin-top: 10px; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+    .lead { max-width: 38rem; font-size: 1.15rem; line-height: 1.55; margin: 22px 0 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    section { padding: 64px 0; }
+    .split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; }
+    .muted { color: var(--muted); line-height: 1.6; }
+    .games, .steps, .specs { display: grid; gap: 12px; }
+    .card { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 14px 16px; }
+    .card strong { display: block; }
+    .card span, .card p { color: var(--muted); margin: 6px 0 0; font-size: .92rem; }
+    .band { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .steps { grid-template-columns: repeat(3, 1fr); }
+    .num { color: var(--accent); font-family: Unbounded, sans-serif; font-style: italic; }
+    .row { display: flex; align-items: center; gap: 14px; border-bottom: 1px solid var(--line); background: var(--surface); padding: 14px 16px; }
+    .row:hover { background: #1c1c20; }
+    .list { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .mark { width: 40px; height: 40px; border-radius: 6px; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 800; flex: none; font-size: .8rem; }
+    .row > span:last-child { display: flex; flex-direction: column; min-width: 0; }
+    .row > span:last-child span { color: var(--muted); font-size: .92rem; margin-top: 2px; }
+    .specs { grid-template-columns: repeat(4, 1fr); }
+    footer { text-align: center; color: var(--muted); padding: 28px 16px 40px; font-size: .9rem; }
+    @media (max-width: 800px) {
+      nav { display: none; }
+      .split, .steps, .specs { grid-template-columns: 1fr; }
     }
   </style>
-  <script>
-    function togglePCInfo() {
-      const info = document.getElementById('pcInfo');
-      info.style.display = info.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
 </head>
 <body>
-  <header>KOVALYUK</header>
-  <p class="about">Стример, геймер, нарезки и угар — CS2, GTA V RP, Dota Turbo, PUBG, Hearthstone</p>
+  <header>
+    <div class="wrap bar">
+      <a class="logo" href="#top">KOVALYUK</a>
+      <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#links">Площадки</a>
+        <a href="#pc">Компьютер</a>
+      </nav>
+      <a class="btn" href="https://www.twitch.tv/kovalyuk_" target="_blank" rel="noreferrer">Смотреть</a>
+    </div>
+  </header>
 
-  <div class="player-container">
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PL55ZngY4c5WJ9yFK9mKJgB0GqXz42mDc-&autoplay=1&loop=1&mute=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
+  <main id="top">
+    <section class="hero">
+      <img src="https://i.ibb.co/kgQdQYww/Chat-GPT-Image-11-2025-22-50-22.png" alt="Ночной город" />
+      <div class="shade"></div>
+      <div class="wrap">
+        <p class="kicker">Стример</p>
+        <h1>KOVALYUK</h1>
+        <p class="lead">Играю в прямом эфире: Counter-Strike 2, GTA V RP, Dota 2 Turbo, PUBG и Hearthstone. Здесь собраны все площадки, где можно смотреть трансляции и написать мне.</p>
+        <div class="actions">
+          <a class="btn" href="https://www.twitch.tv/kovalyuk_" target="_blank" rel="noreferrer">Смотреть эфир</a>
+          <a class="btn ghost" href="#links">Все площадки</a>
+        </div>
+      </div>
+    </section>
 
-  <div class="socials">
-    <a href="https://www.youtube.com/c/K0VALYUK" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="yt">YouTube</a>
-    <a href="https://www.twitch.tv/kovalyuk_" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968819.png" alt="twitch">Twitch</a>
-    <a href="https://vk.com/k0valyuk" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK</a>
-    <a href="https://vk.com/k0valyukk" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="vk">VK Группа</a>
-    <a href="https://t.me/KovalyuKstream" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="tg">Telegram</a>
-    <a href="https://kick.com/kovalyuk" target="_blank"><img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/08/12/kick-stream-featured.jpg?width=1200&quality=60&format=auto" alt="kick">Kick</a>
-    <a href="https://trovo.live/s/Kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxwGW91fxkXpgrd_wYdOWbZNMvycAs7hCnA&s" alt="trovo">Trovo</a>
-    <a href="https://www.instagram.com/k0valyuk/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="insta">Instagram</a>
-    <a href="https://www.faceit.com/ru/players/kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXdUSlb9ptvpbvF4fcGPPmDdHbS8qVs7L3PA&s" alt="faceit">Faceit</a>
-    <a href="https://www.donationalerts.com/r/kovalyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlh9qcJPe6cxOqXtrXlzEIEcrxECaBvP1A1A&s" alt="donate">Donate</a>
-    <a href="https://steamcommunity.com/id/k0valyuk" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NFzAgOzGpHjcJ_ti8xDDblWQDKjRLqaJWQ&s" alt="steam">Steam</a>
-    <a href="https://discord.com/users/KOVALYUK" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="discord">Discord</a>
-  </div>
+    <section id="about">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Обо мне</p>
+          <h2>Что здесь происходит</h2>
+          <p class="muted">Это личная страница стримера KOVALYUK. Основной эфир идёт на Twitch. Записи остаются на YouTube. О начале трансляции пишу в Telegram, чтобы не приходилось проверять площадки вручную.</p>
+          <p class="muted">Если хочешь поддержать эфир — есть DonationAlerts. По игре в CS2 можно посмотреть статистику на FACEIT и добавить профиль в Steam.</p>
+        </div>
+        <div class="games">
+          <article class="card"><strong>Counter-Strike 2</strong><span>Соревновательные матчи и обычные катки.</span></article>
+          <article class="card"><strong>GTA V RP</strong><span>Ролевая игра на серверах, живые ситуации.</span></article>
+          <article class="card"><strong>Dota 2 Turbo</strong><span>Быстрые игры, без длинных каток.</span></article>
+          <article class="card"><strong>PUBG</strong><span>Королевская битва, соло и с командой.</span></article>
+          <article class="card"><strong>Hearthstone</strong><span>Карточная игра между основными эфирами.</span></article>
+        </div>
+      </div>
+    </section>
 
-  <div class="extras">
-    <button onclick="togglePCInfo()">🖥️ Мой ПК</button>
-  </div>
+    <section class="band">
+      <div class="wrap">
+        <p class="kicker">Как смотреть</p>
+        <h2>Три шага</h2>
+        <div class="steps" style="margin-top:28px">
+          <article class="card"><p class="num">01</p><strong>Открой Twitch</strong><p>Основной эфир всегда начинается там. Если канала нет в эфире — загляни в Telegram.</p></article>
+          <article class="card"><p class="num">02</p><strong>Подпишись на Telegram</strong><p>Там пишу, когда выхожу. Не нужно обновлять страницу вхолостую.</p></article>
+          <article class="card"><p class="num">03</p><strong>Смотри запись на YouTube</strong><p>Пропустил прямой эфир — запись остаётся на канале.</p></article>
+        </div>
+      </div>
+    </section>
 
-  <div id="pcInfo" class="pc-info">
-    <strong>Моя сборка:</strong><br>
-    🔹 Процессор: AMD Ryzen 7 3700X<br>
-    🔹 Видеокарта: NVIDIA GeForce RTX 3070<br>
-    🔹 ОЗУ: HyperX Fury Black 2×8 GB<br>
-    🔹 Материнка: Gigabyte B450M Gaming<br>
-    🔹 SSD M.2: Samsung 1 TB<br>
-    🔹 Монитор: AOC 27G2U/BK 144 Гц<br>
-    🔹 Клавиатура: Logitech G413<br>
-    🔹 Мышка: Logitech G102<br>
-  </div>
+    <section id="links">
+      <div class="wrap">
+        <p class="kicker">Площадки</p>
+        <h2>Куда перейти</h2>
+        <p class="muted">Двенадцать ссылок. Нажми на строку — откроется площадка.</p>
+        <div class="list" style="margin-top:24px">
+          <a class="row" href="https://www.twitch.tv/kovalyuk_" target="_blank" rel="noreferrer"><span class="mark">Tw</span><span><strong>Twitch</strong><span>Основной эфир. Здесь идут стримы в реальном времени.</span></span></a>
+          <a class="row" href="https://www.youtube.com/c/K0VALYUK" target="_blank" rel="noreferrer"><span class="mark">Yt</span><span><strong>YouTube</strong><span>Канал с записями. Удобно смотреть, если пропустил прямой эфир.</span></span></a>
+          <a class="row" href="https://kick.com/kovalyuk" target="_blank" rel="noreferrer"><span class="mark">Kk</span><span><strong>Kick</strong><span>Запасная площадка для эфира, если Twitch недоступен.</span></span></a>
+          <a class="row" href="https://trovo.live/s/Kovalyuk" target="_blank" rel="noreferrer"><span class="mark">Tr</span><span><strong>Trovo</strong><span>Ещё одна платформа, где иногда проходит трансляция.</span></span></a>
+          <a class="row" href="https://t.me/KovalyuKstream" target="_blank" rel="noreferrer"><span class="mark">Tg</span><span><strong>Telegram</strong><span>Канал стрима: анонсы, когда выхожу в эфир.</span></span></a>
+          <a class="row" href="https://vk.com/k0valyuk" target="_blank" rel="noreferrer"><span class="mark">VK</span><span><strong>ВКонтакте</strong><span>Личная страница. Новости и ссылки на трансляции.</span></span></a>
+          <a class="row" href="https://vk.com/k0valyukk" target="_blank" rel="noreferrer"><span class="mark">VK</span><span><strong>Группа ВК</strong><span>Сообщество: посты, обсуждения и анонсы.</span></span></a>
+          <a class="row" href="https://www.instagram.com/k0valyuk/" target="_blank" rel="noreferrer"><span class="mark">Ig</span><span><strong>Instagram</strong><span>Фото и короткие ролики. Аккаунт @k0valyuk.</span></span></a>
+          <a class="row" href="https://discord.com/users/KOVALYUK" target="_blank" rel="noreferrer"><span class="mark">Ds</span><span><strong>Discord</strong><span>Личные сообщения. Написать напрямую.</span></span></a>
+          <a class="row" href="https://steamcommunity.com/id/k0valyuk" target="_blank" rel="noreferrer"><span class="mark">St</span><span><strong>Steam</strong><span>Игровой профиль. Добавляйся в друзья.</span></span></a>
+          <a class="row" href="https://www.faceit.com/ru/players/kovalyuk" target="_blank" rel="noreferrer"><span class="mark">Fc</span><span><strong>FACEIT</strong><span>Статистика и матчи в Counter-Strike 2.</span></span></a>
+          <a class="row" href="https://www.donationalerts.com/r/kovalyuk" target="_blank" rel="noreferrer"><span class="mark">$</span><span><strong>Донат</strong><span>Поддержать эфир через DonationAlerts.</span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="pc" class="band">
+      <div class="wrap">
+        <p class="kicker">Компьютер</p>
+        <h2>На чём идёт эфир</h2>
+        <p class="muted">Сборка хватает на CS2, GTA V и стрим одновременно. Монитор 144 Гц, видеокарта RTX 3070.</p>
+        <div class="specs" style="margin-top:28px">
+          <article class="card"><span>Процессор</span><strong>AMD Ryzen 7 3700X</strong></article>
+          <article class="card"><span>Видеокарта</span><strong>NVIDIA GeForce RTX 3070</strong></article>
+          <article class="card"><span>Память</span><strong>HyperX Fury Black, 2×8 ГБ</strong></article>
+          <article class="card"><span>Плата</span><strong>Gigabyte B450M Gaming</strong></article>
+          <article class="card"><span>Накопитель</span><strong>SSD M.2 Samsung, 1 ТБ</strong></article>
+          <article class="card"><span>Монитор</span><strong>AOC 27G2U/BK, 144 Гц</strong></article>
+          <article class="card"><span>Клавиатура</span><strong>Logitech G413</strong></article>
+          <article class="card"><span>Мышь</span><strong>Logitech G102</strong></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>KOVALYUK · стримы и личные площадки</footer>
 </body>
 </html>
