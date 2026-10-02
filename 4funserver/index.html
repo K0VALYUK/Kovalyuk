@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4FUN Server — вики</title>
+  <meta name="description" content="Вики 4 Fun Server: вход на FiveM и соцсети проекта." />
+  <meta name="theme-color" content="#0e0e0e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0e0e0e; color: #fff; font-family: Manrope, system-ui, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, .logo { font-family: Unbounded, system-ui, sans-serif; }
+    header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; padding: 0 20px; border-bottom: 1px solid #2c2c2c; background: #0e0e0e; }
+    .logo { letter-spacing: .04em; text-transform: uppercase; font-size: 18px; }
+    .logo span { margin-left: 8px; color: #9b9ba4; font-size: 12px; letter-spacing: .14em; }
+    nav { display: flex; gap: 22px; color: #9b9ba4; font-size: 14px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 16px; border-radius: 6px; background: #e81c5a; color: #fff; font-weight: 700; font-size: 14px; border: 0; cursor: pointer; }
+    .btn.ghost { background: #111; border: 1px solid #2c2c2c; }
+    main { max-width: 1080px; margin: 0 auto; padding: 40px 20px 64px; }
+    .hero { display: grid; gap: 28px; }
+    .kicker { color: #e81c5a; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 12px 0 0; font-size: 56px; line-height: .95; text-transform: uppercase; }
+    .lead { max-width: 36rem; color: #9b9ba4; font-size: 18px; }
+    .row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .mono { color: #9b9ba4; font-family: ui-monospace, monospace; font-size: 14px; }
+    .preview, .card, .soc, .faq { background: #111; border: 1px solid #2c2c2c; border-radius: 12px; }
+    .preview { padding: 20px 20px 0; }
+    .count { margin: 12px 0 0; font-family: Unbounded, sans-serif; font-size: 52px; line-height: 1; }
+    .count span { color: #9b9ba4; font-size: 24px; }
+    .bar { height: 8px; margin: 16px 0; background: #181818; border-radius: 99px; overflow: hidden; }
+    .bar i { display: block; height: 100%; width: 0; background: #e81c5a; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; border-top: 1px solid #2c2c2c; }
+    .stats div { padding: 14px 8px; }
+    .stats strong { display: block; font-family: Unbounded, sans-serif; text-transform: uppercase; }
+    .stats span, .muted { color: #9b9ba4; font-size: 13px; }
+    section { margin-top: 36px; }
+    h2 { margin: 0; font-size: 28px; text-transform: uppercase; }
+    .grid { display: grid; gap: 12px; margin-top: 16px; }
+    .card, .faq { padding: 20px; }
+    .card .n { color: #e81c5a; font-family: Unbounded, sans-serif; }
+    .card h3, .faq h3 { margin: 10px 0 0; text-transform: uppercase; font-size: 18px; }
+    .facts { display: grid; gap: 10px; margin-top: 18px; }
+    .fact { background: #181818; border-radius: 8px; padding: 12px 14px; }
+    .fact span { display: block; color: #9b9ba4; font-size: 12px; }
+    .soc { display: flex; flex-direction: column; justify-content: center; min-height: 96px; padding: 0 20px; transition: background .2s; }
+    .soc strong { font-family: Unbounded, sans-serif; font-size: 24px; text-transform: uppercase; }
+    .soc.discord:hover { background: #434ee4; }
+    .soc.vk:hover { background: #3375f6; }
+    .soc.yt:hover { background: #ea3323; }
+    .soc.tg:hover { background: #2a9fd6; }
+    footer { border-top: 1px solid #2c2c2c; color: #9b9ba4; font-size: 14px; }
+    footer div { max-width: 1080px; margin: 0 auto; padding: 22px 20px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (min-width: 800px) {
+      .hero { grid-template-columns: 1.1fr .9fr; align-items: center; }
+      .grid.three { grid-template-columns: repeat(3, 1fr); }
+      .grid.two { grid-template-columns: 1fr 1fr; }
+      .facts { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 700px) { nav { display: none; } h1 { font-size: 40px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#top">4FUN <span>wiki</span></a>
+    <nav>
+      <a href="#preview">Сервер</a>
+      <a href="#start">Как начать</a>
+      <a href="#socials">Соцсети</a>
+    </nav>
+    <a class="btn" href="https://cfx.re/join/3yyo3x8">Начать играть</a>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div>
+        <p class="kicker">Alpha 1.3 · FiveM</p>
+        <h1>4 Fun Server</h1>
+        <p class="lead">Свободный мир, где всегда есть чем заняться. Гонки, дрифт, кланы и ивенты.</p>
+        <div class="row">
+          <a class="btn" href="https://cfx.re/join/3yyo3x8">Начать играть</a>
+          <button class="btn ghost" type="button" id="copy">Команда connect</button>
+        </div>
+        <p class="mono" id="cmd">connect 45.157.161.143:30120</p>
+      </div>
+      <div class="preview" id="live">
+        <p class="kicker" id="live-state">Проверяем</p>
+        <p class="count" id="live-count">— <span>/ 48</span></p>
+        <p class="muted">игроков сейчас</p>
+        <div class="bar" aria-hidden="true"><i id="live-bar"></i></div>
+        <p id="live-name">4 Fun Server</p>
+        <div class="stats">
+          <div><strong id="live-peak">—</strong><span>пик</span></div>
+          <div><strong id="live-mode">—</strong><span>режим</span></div>
+          <div><strong id="live-max">48</strong><span>слоты</span></div>
+        </div>
+      </div>
+    </section>
+    <section id="preview">
+      <div class="card">
+        <p class="kicker">Превью сервера</p>
+        <h2>4 Fun Server | Alpha 1.3</h2>
+        <p class="muted">Открытая альфа на 48 мест. Доллары и Event Coin, уровни, уважение и PayDay каждые 30 минут.</p>
+        <div class="facts">
+          <div class="fact"><span>Быстрый вход</span>cfx.re/join/3yyo3x8</div>
+          <div class="fact"><span>Прямое подключение</span>45.157.161.143:30120</div>
+          <div class="fact"><span>Бонус</span>/bonus Start</div>
+          <div class="fact"><span>Стартовый набор</span>500 Event Coin · 1000$ · 7 дней Premium</div>
+        </div>
+        <div class="row">
+          <a class="btn" href="https://cfx.re/join/3yyo3x8">Подключиться</a>
+          <a class="btn ghost" href="https://servers.fivem.net/servers/detail/3yyo3x8">Карточка в FiveM</a>
+        </div>
+      </div>
+    </section>
+    <section id="start">
+      <h2>Как начать играть</h2>
+      <div class="grid three">
+        <article class="card"><p class="n">01</p><h3>GTA V и FiveM</h3><p class="muted">Нужна лицензия Grand Theft Auto V и клиент FiveM.</p></article>
+        <article class="card"><p class="n">02</p><h3>Подключение</h3><p class="muted">Кнопка «Начать играть» или F8 и команда connect.</p></article>
+        <article class="card"><p class="n">03</p><h3>Бонус новичка</h3><p class="muted">/bonus Start — 500 Event Coin, 1000$ и 7 дней Premium.</p></article>
+      </div>
+    </section>
+    <section id="socials">
+      <h2>Соцсети</h2>
+      <p class="muted">TikTok и Instagram у проекта пока нет.</p>
+      <div class="grid two">
+        <a class="soc discord" href="https://discord.gg/uXGK7KNXT5"><strong>Discord</strong><span class="muted">Сервер 4 Fun Server</span></a>
+        <a class="soc vk" href="https://vk.com/4fun.server"><strong>ВКонтакте</strong><span class="muted">Группа проекта</span></a>
+        <a class="soc yt" href="https://www.youtube.com/@4FunServer"><strong>YouTube</strong><span class="muted">Ролики и нарезки</span></a>
+        <a class="soc tg" href="https://t.me/fourfunserver"><strong>Telegram</strong><span class="muted">Новости альфы</span></a>
+      </div>
+    </section>
+    <section>
+      <h2>Скины</h2>
+      <p class="muted">Подраздел со скинами будет следующим.</p>
+    </section>
+    <section>
+      <h2>Частые вопросы</h2>
+      <div class="grid three">
+        <article class="faq"><h3>Что за сервер?</h3><p class="muted">Открытая альфа 1.3 на FiveM. Гонки, дрифт, кланы и ивенты. 48 слотов.</p></article>
+        <article class="faq"><h3>Как зайти?</h3><p class="muted">cfx.re/join/3yyo3x8 или F8: connect 45.157.161.143:30120.</p></article>
+        <article class="faq"><h3>Какая валюта?</h3><p class="muted">Доллары и Event Coin. PayDay каждые 30 минут.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><div><span>4 Fun Server wiki</span><span>Не связано с Rockstar Games и Majestic RP.</span></div></footer>
+  <script>
+    document.getElementById("copy").addEventListener("click", async function () {
+      var text = document.getElementById("cmd").textContent;
+      try { await navigator.clipboard.writeText(text); } catch (e) {}
+      this.textContent = "Скопировано";
+    });
+    var STATUS = "https://api.allorigins.win/raw?url=" + encodeURIComponent("https://frontend.cfx-services.net/api/servers/single/3yyo3x8");
+    async function refreshLive() {
+      var state = document.getElementById("live-state");
+      try {
+        var res = await fetch(STATUS);
+        if (!res.ok) throw new Error("status");
+        var data = (await res.json()).Data || {};
+        var vars = data.vars || {};
+        var clients = Number(data.clients) || 0;
+        var max = Number(data.sv_maxclients) || 48;
+        var peak = Number(vars.peak_players);
+        state.textContent = "Онлайн";
+        document.getElementById("live-count").textContent = "";
+        document.getElementById("live-count").append(document.createTextNode(String(clients) + " "));
+        var span = document.createElement("span");
+        span.textContent = "/ " + max;
+        document.getElementById("live-count").append(span);
+        document.getElementById("live-bar").style.width = Math.min(100, Math.round(clients / max * 100)) + "%";
+        document.getElementById("live-name").textContent = vars.sv_projectName || data.hostname || "4 Fun Server";
+        document.getElementById("live-peak").textContent = Number.isFinite(peak) ? String(peak) : "—";
+        document.getElementById("live-mode").textContent = data.gametype || "—";
+        document.getElementById("live-max").textContent = String(max);
+      } catch (e) {
+        state.textContent = "Нет связи";
+      }
+    }
+    refreshLive();
+    setInterval(refreshLive, 20000);
+  </script>
+</body>
+</html>
